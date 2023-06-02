@@ -19,6 +19,13 @@ class WIP extends StatelessWidget {
             Text(
               'Work In Progress',
               style: GoogleFonts.satisfy(color: Colors.white, fontSize: 28),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Text(
+              'Profile Page is functional tho... >>>',
+              style: GoogleFonts.satisfy(color: Colors.white, fontSize: 20),
             )
           ],
         ),
