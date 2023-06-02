@@ -1,9 +1,34 @@
+// import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class InstaProfile extends StatelessWidget {
+class InstaProfile extends StatefulWidget {
   const InstaProfile({super.key});
+
+  @override
+  State<InstaProfile> createState() => _InstaProfileState();
+}
+
+class _InstaProfileState extends State<InstaProfile> {
+  // final Uri _url = Uri.parse('https://flutter.dev');
+  Future<void> _launchUrl(String link) async {
+    final Uri _url = Uri.parse(link);
+    if (!await launchUrl(_url)) {
+      throw Exception('Could not launch $_url');
+    }
+  }
+
+  //Url launcher method
+  // Future<void> _launchURL(String url) async {
+  //   final Uri uri = Uri(scheme: "https", host: url);
+  //   if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+  //     throw "can't open link";
+  //   }
+  //   ;
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -66,21 +91,23 @@ class InstaProfile extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    FontAwesomeIcons.instagram,
-                    color: Colors.white,
-                    size: 36,
-                  ),
+              IconButton(
+                onPressed: () {
+                  _launchUrl('https://www.instagram.com/an.ku_sh/');
+                },
+                icon: const Icon(
+                  FontAwesomeIcons.instagram,
+                  color: Colors.white,
+                  size: 36,
                 ),
               ),
               const SizedBox(
                 width: 20,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  _launchUrl('https://twitter.com/AnkushBehera11');
+                },
                 icon: const Icon(
                   FontAwesomeIcons.twitter,
                   color: Colors.white,
@@ -91,18 +118,25 @@ class InstaProfile extends StatelessWidget {
                 width: 20,
               ),
               IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  FontAwesomeIcons.discord,
-                  color: Colors.white,
-                  size: 36,
-                ),
-              ),
+                  onPressed: () {
+                    final Uri mailUrl = Uri(
+                      scheme: 'mailto',
+                      path: 'ankush41behera@gmail.com',
+                    );
+                    _launchUrl(mailUrl.toString());
+                  },
+                  icon: const Icon(
+                    Icons.mail,
+                    color: Colors.white,
+                    size: 40,
+                  )),
               const SizedBox(
                 width: 30,
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  _launchUrl('https://github.com/an-ku-sh');
+                },
                 icon: const Icon(
                   FontAwesomeIcons.github,
                   color: Colors.white,

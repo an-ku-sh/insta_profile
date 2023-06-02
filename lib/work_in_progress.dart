@@ -24,7 +24,7 @@ class WIP extends StatelessWidget {
               height: 20,
             ),
             Text(
-              'Profile Page is functional tho... >>>',
+              'Profile Page -->',
               style: GoogleFonts.satisfy(color: Colors.white, fontSize: 20),
             )
           ],
