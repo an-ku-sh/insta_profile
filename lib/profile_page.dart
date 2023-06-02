@@ -10,11 +10,42 @@ class InstaProfile extends StatelessWidget {
     //Scaffold
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'an.ku_sh',
-          style: GoogleFonts.ubuntu(),
+        title: Row(
+          children: [
+            const SizedBox(
+              width: 3,
+            ),
+            const Icon(Icons.lock_outline),
+            const SizedBox(
+              width: 10,
+            ),
+            Text(
+              'an.ku_sh',
+              style:
+                  GoogleFonts.ubuntu(fontSize: 25, fontWeight: FontWeight.w600),
+            ),
+            const Icon(
+              Icons.keyboard_arrow_down,
+              size: 25,
+            ),
+            const SizedBox(
+              width: 100,
+            ),
+            const Icon(Icons.add_box_rounded),
+            const SizedBox(
+              width: 20,
+            ),
+            const Icon(
+              Icons.reorder,
+              size: 32,
+            )
+          ],
         ),
-        leading: const Icon(Icons.lock_outline),
+        // Text(
+        //   'an.ku_sh',
+        //   style: GoogleFonts.ubuntu(),
+        // ),
+        // leading: const Icon(Icons.lock_outline),
         backgroundColor: Colors.black,
       ),
       body: Container(),
