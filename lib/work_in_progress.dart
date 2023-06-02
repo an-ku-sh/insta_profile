@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 class WIP extends StatelessWidget {
@@ -6,8 +7,22 @@ class WIP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: LottieBuilder.asset('lib/assets/wip.json'),
+    return Padding(
+      padding: const EdgeInsets.all(28.0),
+      child: Center(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 120,
+            ),
+            LottieBuilder.asset('lib/assets/wip.json'),
+            Text(
+              'Work In Progress',
+              style: GoogleFonts.satisfy(color: Colors.white, fontSize: 28),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

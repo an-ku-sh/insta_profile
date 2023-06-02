@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:insta_profile/work_in_progress.dart';
 
 class InstaProfile extends StatelessWidget {
   const InstaProfile({super.key});

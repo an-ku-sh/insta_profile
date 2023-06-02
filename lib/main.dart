@@ -61,7 +61,7 @@ class _MaterialBaseState extends State<MaterialBase> {
                       icon: Icons.video_call_outlined,
                       text: 'Reels',
                       iconSize: 29),
-                  GButton(icon: Icons.abc, text: 'Profile'),
+                  GButton(icon: Icons.account_circle, text: 'Profile'),
                 ],
                 selectedIndex: _selectedIndex,
                 onTabChange: (index) {
